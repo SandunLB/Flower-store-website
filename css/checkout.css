@@ -1,0 +1,109 @@
+/* Add these styles to your checkout.css file */
+
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.heading {
+    margin-bottom: 20px;
+}
+
+.heading h3 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.heading p {
+    font-size: 16px;
+    color: #666;
+    margin: 5px 0;
+}
+
+.display-order {
+    margin-bottom: 20px;
+}
+
+.display-order p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.display-order .empty {
+    font-style: italic;
+    color: #666;
+}
+
+.grand-total {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.checkout {
+    margin-top: 20px;
+}
+
+.checkout h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.inputBox {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.inputBox span {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.inputBox input[type="text"],
+.inputBox input[type="number"],
+.inputBox input[type="email"],
+.inputBox select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.inputBox select {
+    background-color: #fff;
+}
+
+.btn {
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #ff3333;
+}
+
+footer {
+    margin-top: 20px;
+}

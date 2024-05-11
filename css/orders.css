@@ -1,0 +1,75 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.heading {
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.heading h3 {
+    margin: 0;
+}
+
+.heading p {
+    margin: 5px 0 0;
+}
+
+.content {
+    padding: 20px 0;
+}
+
+.placed-orders {
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.order-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.order {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.order-info,
+.order-details {
+    padding: 10px;
+}
+
+.order-detail {
+    margin-bottom: 5px;
+}
+
+.empty {
+    text-align: center;
+    font-style: italic;
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .order-list {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}

@@ -1,0 +1,237 @@
+/* General Styles */
+body {
+    background-image: url('../images/contact.jpg'); /* Replace 'background.jpg' with your image */
+    backdrop-filter: blur(5px); /* Blur effect */
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2; /* Light gray background */
+}
+
+.home-main {
+    padding: 20px;
+}
+
+/* Home Section */
+.home {
+    background-image: url('../images/home-bg.png'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.home h3 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.home p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.home .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green button color */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.home .btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Products Section */
+.products {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.products .title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.box {
+    position: relative;
+    overflow: hidden;
+}
+
+.box .image {
+    width: 100%;
+    display: block;
+    border-radius: 30px;
+    transition: transform 0.3s ease;
+}
+
+.box:hover .image {
+    transform: scale(1.2);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.box:hover .overlay {
+    opacity: 1;
+}
+
+.overlay .name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.overlay .price {
+    font-size: 16px;
+    margin-bottom: 5px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.btn-container {
+    display: flex;
+}
+
+.btn-container input[type="submit"] {
+    margin: 0 5px;
+    padding: 8px 12px;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-container input[type="submit"]:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.more-btn {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.more-btn .option-btn {
+    background-image: url('../images/flower.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 10px 20px;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; 
+    display: inline-block;
+}
+
+.more-btn .option-btn:hover {
+    background-color: #45a091;
+    transform: scale(1.1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); 
+}
+
+
+.btn-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+}
+
+input.qty {
+    width: 30px; /* Adjust the width as needed */
+    height: 20px; /* Adjust the height as needed */
+    padding: 2px; /* Adjust the padding as needed */
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Transparent border */
+    background-color: transparent;
+    color: inherit;
+    font-size: 12px; /* Adjust the font size as needed */
+    opacity: 0.7; /* Adjust the opacity as needed */
+    border-radius: 3px; /* Adjust the border radius as needed */
+    transition: opacity 0.3s ease; /* Add a transition effect */
+    outline: none; /* Remove default outline */
+    margin-bottom: 5px; /* Add space between items */
+}
+
+input.qty:hover,
+input.qty:focus {
+    opacity: 1; /* Increase opacity on hover or focus */
+}
+
+.option-btn,
+.btn {
+    width: auto; /* Reset width */
+    margin: 0; /* Reset margin */
+}
+
+
+/* Home Contact Section */
+.home-contact {
+    background-color: rgba(0, 128, 128, 0.7); /* Transparent dark cyan background */
+    padding: 20px;
+    margin-top: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.home-contact h3 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.home-contact p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.home-contact .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #008080; /* Dark cyan button color */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.home-contact .btn:hover {
+    background-color: #006666; /* Darker cyan on hover */
+}
+
+

@@ -1,0 +1,62 @@
+.footer {
+    background: linear-gradient(135deg, #fcfcfca4, #ffffffa2), url('../images/footer.png') center/cover; /* Nature-inspired green gradient with background image */
+    color: #333;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 20px;
+    
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.footer-info, .footer-links {
+    flex: 1;
+    padding: 0 20px;
+    transition: all 0.3s ease;
+}
+
+.footer-info h3, .footer-links h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-info p {
+    margin: 5px 0;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 5px;
+}
+
+.footer-links ul li a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #ffd700; /* Change to your desired hover color */
+}
+
+.footer-credit {
+    margin-top: 20px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.footer:hover .footer-info, .footer:hover .footer-links {
+    transform: translateY(-5px);
+}
+
+.footer:hover .footer-credit {
+    transform: translateY(-10px);
+}

@@ -1,0 +1,86 @@
+/* Add these styles to your contact.css file */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('../images/contact.jpg'); /* Replace 'background.jpg' with your image */
+    backdrop-filter: blur(5px); /* Blur effect */
+    background-size: cover;
+    color: #000000;
+}
+
+.contact {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 700px;
+   
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blur effect */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Box shadow */
+}
+
+.title {
+    font-size: 36px;
+    margin-bottom: 30px;
+    animation: fadeInUp 1s ease;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.box {
+    width: calc(100% - 30px);
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    font-size: 16px;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+.box:focus {
+    background-color: rgba(255, 255, 255, 1); /* Fully opaque background on focus */
+    outline: none;
+}
+
+textarea {
+    resize: none;
+    height: 150px;
+}
+
+.btn {
+    width: calc(100% - 30px);
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ff6f61;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff4942;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

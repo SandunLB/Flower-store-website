@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('../images/contact.jpg'); /* Replace 'background.jpg' with your image */
+    backdrop-filter: blur(5px); /* Blur effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    color: #000000;
+}
+
+img{
+    width: 500px;
+    border-radius: 50px;
+}
+.about {
+    padding: 100px 0;
+    background-color: #f7f7f748;
+    text-align: center;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.container h2 {
+    font-size: 48px;
+    color: #333;
+    margin-bottom: 50px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.content .image {
+    flex: 1;
+    margin-right: 50px;
+    animation: fadeInLeft 1s ease-in-out;
+}
+
+.content .text {
+    flex: 1;
+    text-align: left;
+    animation: fadeInRight 1s ease-in-out;
+}
+
+.content .text p {
+    font-size: 20px;
+    color: #555;
+    line-height: 1.6;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
