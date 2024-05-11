@@ -12,11 +12,14 @@ body {
 a {
     text-decoration: none;
     color: #007bff;
+    transition: transform 0.3s ease;
 }
 
 a:hover {
-    text-decoration: underline;
+    transform: scale(1.2);
+    
 }
+
 .home-main {
     padding: 20px;
 }

@@ -46,12 +46,12 @@ if(isset($message)){
                 $select_wishlist_count = mysqli_query($conn, "SELECT * FROM `wishlist` WHERE user_id = '$user_id'") or die('query failed');
                 $wishlist_num_rows = mysqli_num_rows($select_wishlist_count);
             ?>
-            <a href="wishlist.php"><i class="header-heart-icon">💖</i><span>(<?php echo $wishlist_num_rows; ?>)</span></a>
+            <a href="wishlist.php" class="header-heart-icon">💖</i><span>(<?php echo $wishlist_num_rows; ?>)</span></a>
             <?php
                 $select_cart_count = mysqli_query($conn, "SELECT * FROM `cart` WHERE user_id = '$user_id'") or die('query failed');
                 $cart_num_rows = mysqli_num_rows($select_cart_count);
             ?>
-            <a href="cart.php"><i class="header-cart-icon">🛍️</i><span>(<?php echo $cart_num_rows; ?>)</span></a>
+            <a href="cart.php" class="header-cart-icon">🛍️<span>(<?php echo $cart_num_rows; ?>)</span></a>
         </div>
 
         <div class="header-account-box">

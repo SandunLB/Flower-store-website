@@ -1,0 +1,119 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+main.wishlist {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.wishlist-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+.wishlist-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.wishlist-item__image {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.wishlist-item__details {
+    padding: 10px;
+}
+
+.wishlist-item__name {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.wishlist-item__price {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.wishlist-item__actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wishlist-item__delete,
+.wishlist-item__view {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.wishlist-item__delete {
+    background-color: #e74c3c;
+}
+
+.wishlist-item__view {
+    background-color: #3498db;
+}
+
+.wishlist-total {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wishlist-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.wishlist-actions__button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2ecc71;
+    color: #fff;
+    text-decoration: none;
+}
+
+.wishlist-actions__button.disabled {
+    background-color: #ccc;
+    pointer-events: none;
+}
+
+.wishlist-actions__button:hover {
+    background-color: #27ae60;
+}
+
+.empty {
+    text-align: center;
+    font-style: italic;
+    color: #888;
+}

@@ -55,74 +55,48 @@ if(isset($_GET['delete_all'])){
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>wishlist</title>
-
-   <!-- font awesome cdn link  -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-   <!-- custom admin css file link  -->
-   <link rel="stylesheet" href="css/style.css">
-
+   <title>Wishlist</title>
+   <link rel="stylesheet" href="css/wishlist.css">
 </head>
 <body>
-   
-<?php @include 'header.php'; ?>
-
-<section class="heading">
-    <h3>your wishlist</h3>
-    <p> <a href="home.php">home</a> / wishlist </p>
-</section>
-
-<section class="wishlist">
-
-    <h1 class="title">products added</h1>
-
-    <div class="box-container">
-
-    <?php
-        $grand_total = 0;
-        $select_wishlist = mysqli_query($conn, "SELECT * FROM `wishlist` WHERE user_id = '$user_id'") or die('query failed');
-        if(mysqli_num_rows($select_wishlist) > 0){
+   <?php include 'header.php'; ?>
+   <main class="wishlist">
+      <h1>Products Added</h1>
+      <?php
+         $grand_total = 0;
+         $select_wishlist = mysqli_query($conn, "SELECT * FROM `wishlist` WHERE user_id = '$user_id'") or die('Query failed');
+         if(mysqli_num_rows($select_wishlist) > 0){
+            echo '<div class="wishlist-items">';
             while($fetch_wishlist = mysqli_fetch_assoc($select_wishlist)){
-    ?>
-    <form action="" method="POST" class="box">
-        <a href="wishlist.php?delete=<?php echo $fetch_wishlist['id']; ?>" class="fas fa-times" onclick="return confirm('delete this from wishlist?');"></a>
-        <a href="view_page.php?pid=<?php echo $fetch_wishlist['pid']; ?>" class="fas fa-eye"></a>
-        <img src="uploaded_img/<?php echo $fetch_wishlist['image']; ?>" alt="" class="image">
-        <div class="name"><?php echo $fetch_wishlist['name']; ?></div>
-        <div class="price">$<?php echo $fetch_wishlist['price']; ?>/-</div>
-        <input type="hidden" name="product_id" value="<?php echo $fetch_wishlist['pid']; ?>">
-        <input type="hidden" name="product_name" value="<?php echo $fetch_wishlist['name']; ?>">
-        <input type="hidden" name="product_price" value="<?php echo $fetch_wishlist['price']; ?>">
-        <input type="hidden" name="product_image" value="<?php echo $fetch_wishlist['image']; ?>">
-        <input type="submit" value="add to cart" name="add_to_cart" class="btn">
-        
-    </form>
-    <?php
-    $grand_total += $fetch_wishlist['price'];
-        }
-    }else{
-        echo '<p class="empty">your wishlist is empty</p>';
-    }
-    ?>
-    </div>
-
-    <div class="wishlist-total">
-        <p>grand total : <span>$<?php echo $grand_total; ?>/-</span></p>
-        <a href="shop.php" class="option-btn">continue shopping</a>
-        <a href="wishlist.php?delete_all" class="delete-btn <?php echo ($grand_total > 1)?'':'disabled' ?>" onclick="return confirm('delete all from wishlist?');">delete all</a>
-    </div>
-
-</section>
-
-
-
-
-
-
-<?php @include 'footer.php'; ?>
-
-<script src="js/script.js"></script>
-
+               $grand_total += $fetch_wishlist['price'];
+               ?>
+               <div class="wishlist-item">
+                  <img src="uploaded_img/<?php echo $fetch_wishlist['image']; ?>" alt="" class="wishlist-item__image">
+                  <div class="wishlist-item__details">
+                     <h2 class="wishlist-item__name"><?php echo $fetch_wishlist['name']; ?></h2>
+                     <p class="wishlist-item__price">$<?php echo $fetch_wishlist['price']; ?>/-</p>
+                     <div class="wishlist-item__actions">
+                        <a href="wishlist.php?delete=<?php echo $fetch_wishlist['id']; ?>" class="wishlist-item__delete" onclick="return confirm('Delete this from wishlist?');">Remove</a>
+                        <a href="view_page.php?pid=<?php echo $fetch_wishlist['pid']; ?>" class="wishlist-item__view">View</a>
+                     </div>
+                  </div>
+               </div>
+               <?php
+            }
+            echo '</div>'; // Close wishlist-items
+         } else {
+            echo '<p>Your wishlist is empty.</p>';
+         }
+      ?>
+      <div class="wishlist-total">
+         <p>Total: <span>$<?php echo $grand_total; ?>/-</span></p>
+         <div class="wishlist-actions">
+            <a href="shop.php" class="wishlist-actions__button">Continue Shopping</a>
+            <a href="wishlist.php?delete_all" class="wishlist-actions__button <?php echo ($grand_total > 0) ? '' : 'disabled'; ?>" onclick="return confirm('Delete all from wishlist?');">Clear Wishlist</a>
+         </div>
+      </div>
+   </main>
+   <?php include 'footer.php'; ?>
+   <script src="js/script.js"></script>
 </body>
 </html>

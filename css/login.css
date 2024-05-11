@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/contact.jpg'); /* Replace 'background.jpg' with your image */
+    backdrop-filter: blur(5px); /* Blur effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.form-container {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #ffffff31;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.box {
+    width: calc(100% - 10px); /* Subtract padding from width */
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    transition: border-color 0.3s;
+    font-size: 16px;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.box:focus {
+    outline: none;
+    border-color: #555;
+}
+
+.btn {
+    width: calc(100% - 10px); /* Subtract padding from width */
+    padding: 15px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 18px;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+p {
+    text-align: center;
+    margin-top: 20px;
+    color: #555;
+    font-size: 16px;
+}
+
+p a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+p a:hover {
+    color: #555;
+}
+
+/* Message Styles */
+.message {
+    position: relative;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    background-color: #f2dede;
+    color: #a94442;
+    border: 2px solid #ebccd1;
+    border-radius: 25px;
+    animation: slideInDown 0.5s ease forwards, fadeOut 0.5s ease forwards 2s;
+}
+
+.message span {
+    margin-right: 10px;
+}
+
+.message i {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+/* Keyframe animations */
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
