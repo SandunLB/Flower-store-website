@@ -9,6 +9,14 @@ body {
     background-color: #f2f2f2; /* Light gray background */
 }
 
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
 .home-main {
     padding: 20px;
 }

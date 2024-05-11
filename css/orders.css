@@ -1,75 +1,89 @@
-/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-image: url('../images/contact.jpg'); /* Replace 'background.jpg' with your image */
+    backdrop-filter: blur(5px); /* Blur effect */
+    background-size: cover;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+    transition: transform 0.3s ease;
+}
+
+a:hover {
+    transform: scale(1.2);
+    
 }
 
 .container {
-    width: 80%;
+    max-width: 60%;
     margin: 0 auto;
+    padding: 20px;
 }
 
 .heading {
-    background-color: #f2f2f2;
+    background-color: #fff;
     padding: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    border-radius: 10px;
 }
 
 .heading h3 {
     margin: 0;
 }
 
-.heading p {
-    margin: 5px 0 0;
-}
-
 .content {
-    padding: 20px 0;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .placed-orders {
-    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
-.title {
-    font-size: 24px;
-    margin-bottom: 10px;
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
 }
 
-.order-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.order {
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.order-table th, 
+.order-table td {
     padding: 10px;
-    background-color: #fff;
+    text-align: left;
 }
 
-.order-info,
-.order-details {
-    padding: 10px;
+.order-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
 }
 
-.order-detail {
-    margin-bottom: 5px;
+
+
+.order-table tbody tr:hover {
+    background-color: #dfb1b1;
+    transition: background-color 0.3s ease;
 }
+
+.order-table tbody tr:hover td {
+    color: #fff;
+}
+
+.order-table tbody tr:hover td {
+    animation: fadeIn 0.5s ease forwards;
+}
+
 
 .empty {
     text-align: center;
-    font-style: italic;
+    padding: 10px;
 }
 
-/* Media Query for Responsive Design */
-@media (max-width: 768px) {
-    .container {
-        width: 90%;
-    }
 
-    .order-list {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-}

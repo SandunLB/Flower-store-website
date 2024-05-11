@@ -20,47 +20,71 @@ if(!isset($user_id)){
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Your Orders</title>
    
-   <link rel="stylesheet" href="css/order.css">
+   <link rel="stylesheet" href="css/orders.css">
 
 </head>
 <body>
    
 <?php @include 'header.php'; ?>
 
+
 <section class="content">
     <div class="placed-orders">
         <h1 class="title">Placed Orders</h1>
 
-        <div class="order-list">
-            <?php
-            $select_orders = mysqli_query($conn, "SELECT * FROM `orders` WHERE user_id = '$user_id'") or die('query failed');
-            if(mysqli_num_rows($select_orders) > 0){
-                while($fetch_orders = mysqli_fetch_assoc($select_orders)){
-            ?>
-                    <div class="order">
-                        <div class="order-info">
-                            <div class="order-detail">Placed On: <?php echo $fetch_orders['placed_on']; ?></div>
-                            <div class="order-detail">Name: <?php echo $fetch_orders['name']; ?></div>
-                            <div class="order-detail">Number: <?php echo $fetch_orders['number']; ?></div>
-                            <div class="order-detail">Email: <?php echo $fetch_orders['email']; ?></div>
-                            <div class="order-detail">Address: <?php echo $fetch_orders['address']; ?></div>
-                            <div class="order-detail">Payment Method: <?php echo $fetch_orders['method']; ?></div>
-                        </div>
-                        <div class="order-details">
-                            <div class="order-detail">Your Orders: <?php echo $fetch_orders['total_products']; ?></div>
-                            <div class="order-detail">Total Price: $<?php echo $fetch_orders['total_price']; ?>/-</div>
-                            <div class="order-detail">Payment Status: <span style="color:<?php echo ($fetch_orders['payment_status'] == 'pending') ? 'tomato' : 'green'; ?>"><?php echo $fetch_orders['payment_status']; ?></span></div>
-                        </div>
-                    </div>
-            <?php
+        <table class="order-table">
+            <thead>
+                <tr>
+                    <th>Placed On</th>
+                    <th>Name</th>
+                    <th>Number</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>Payment Method</th>
+                    <th>Your Orders</th>
+                    <th>Total Price</th>
+                    <th>Payment Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                $select_orders = mysqli_query($conn, "SELECT * FROM `orders` WHERE user_id = '$user_id'") or die('query failed');
+                if(mysqli_num_rows($select_orders) > 0){
+                    while($fetch_orders = mysqli_fetch_assoc($select_orders)){
+                ?>
+                        <tr>
+                            <td><?php echo $fetch_orders['placed_on']; ?></td>
+                            <td><?php echo $fetch_orders['name']; ?></td>
+                            <td><?php echo $fetch_orders['number']; ?></td>
+                            <td><?php echo $fetch_orders['email']; ?></td>
+                            <td><?php echo $fetch_orders['address']; ?></td>
+                            <td><?php echo $fetch_orders['method']; ?></td>
+                            <td><?php echo $fetch_orders['total_products']; ?></td>
+                            <td>$<?php echo $fetch_orders['total_price']; ?>/-</td>
+                            <td><span style="color:<?php echo ($fetch_orders['payment_status'] == 'pending') ? 'tomato' : 'green'; ?>"><?php echo $fetch_orders['payment_status']; ?></span></td>
+                        </tr>
+                <?php
+                    }
+                } else {
+                    echo '<tr><td colspan="9" class="empty">No orders placed yet!</td></tr>';
                 }
-            } else {
-                echo '<div class="empty">No orders placed yet!</div>';
-            }
-            ?>
-        </div>
+                ?>
+            </tbody>
+        </table>
     </div>
 </section>
+
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+
+        
+
+
 
 <?php @include 'footer.php'; ?>
 

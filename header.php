@@ -40,9 +40,8 @@ if(isset($message)){
         </nav>
 
         <div class="header-icons">
-            <div id="menu-btn" class="header-menu-btn"></div>
             <a href="search_page.php" class="header-search-btn">🔍</a>
-            <div id="user-btn" class="header-user-btn"></div>
+            
             <?php
                 $select_wishlist_count = mysqli_query($conn, "SELECT * FROM `wishlist` WHERE user_id = '$user_id'") or die('query failed');
                 $wishlist_num_rows = mysqli_num_rows($select_wishlist_count);

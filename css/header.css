@@ -3,6 +3,7 @@
    padding: 20px;
 }
 
+
 .header-container {
    display: flex;
    justify-content: space-between;
@@ -57,13 +58,13 @@
 
 .header-menu-btn,
 .header-search-btn,
-.header-user-btn,
 .header-heart-icon,
 .header-cart-icon {
    font-size: 20px;
    margin-right: 10px;
    color: #333;
 }
+
 
 .header-account-box {
    display: none;

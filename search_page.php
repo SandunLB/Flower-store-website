@@ -68,10 +68,7 @@ if(isset($_POST['add_to_cart'])){
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>search page</title>
 
-   <!-- font awesome cdn link  -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-   <!-- custom admin css file link  -->
+  
    <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -79,10 +76,6 @@ if(isset($_POST['add_to_cart'])){
    
 <?php @include 'header.php'; ?>
 
-<section class="heading">
-    <h3>search page</h3>
-    <p> <a href="home.php">home</a> / search </p>
-</section>
 
 <section class="search-form">
     <form action="" method="POST">
