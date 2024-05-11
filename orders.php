@@ -60,7 +60,7 @@ if(!isset($user_id)){
                             <td><?php echo $fetch_orders['address']; ?></td>
                             <td><?php echo $fetch_orders['method']; ?></td>
                             <td><?php echo $fetch_orders['total_products']; ?></td>
-                            <td>$<?php echo $fetch_orders['total_price']; ?>/-</td>
+                            <td>Rs.<?php echo $fetch_orders['total_price']; ?>.00</td>
                             <td><span style="color:<?php echo ($fetch_orders['payment_status'] == 'pending') ? 'tomato' : 'green'; ?>"><?php echo $fetch_orders['payment_status']; ?></span></td>
                         </tr>
                 <?php

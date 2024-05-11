@@ -76,7 +76,7 @@ if(isset($_POST['add_to_cart'])){
 <?php @include 'header.php'; ?>
 
 <section class="products">
-   <h1 class="title">Latest Products</h1>
+   <h1 class="title">Blossom Haven: Your Floral Paradise</h1>
    <div class="box-container">
    <?php
          $select_products = mysqli_query($conn, "SELECT * FROM `products`") or die('query failed');
@@ -90,7 +90,7 @@ if(isset($_POST['add_to_cart'])){
             <div class="overlay">
                <div class="name"><?php echo $fetch_products['name']; ?></div>
                <div class="description"><?php echo $fetch_products['details']; ?></div>
-               <div class="price">$<?php echo $fetch_products['price']; ?>/-</div>
+               <div class="price">Rs.<?php echo $fetch_products['price']; ?>.00</div>
                <div class="btn-container">
                <input type="hidden" name="product_id" value="<?php echo $fetch_products['id']; ?>">
                 <input type="hidden" name="product_name" value="<?php echo $fetch_products['name']; ?>">

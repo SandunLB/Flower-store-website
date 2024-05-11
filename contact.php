@@ -45,7 +45,7 @@ if(isset($_POST['send'])){
 
 <section class="contact">
     <div class="container">
-        <h2 class="title">Get in Touch</h2>
+        <h2 class="title">What's on Your Mind!</h2>
         <form action="" method="POST" class="contact-form">
             <div class="input-group">
                 <input type="text" name="name" placeholder="Your Name" class="box" required>
@@ -57,7 +57,7 @@ if(isset($_POST['send'])){
                 <input type="tel" name="number" placeholder="Your Mobile Number" class="box" required>
             </div>
             <div class="input-group">
-                <textarea name="message" placeholder="Your Message" class="box" required cols="30" rows="6"></textarea>
+                <textarea name="message" placeholder="What's You Thought ! Tell Us :)" class="box" required cols="30" rows="6"></textarea>
             </div>
             <div class="input-group">
                 <input type="submit" value="Send Message" name="send" class="btn">

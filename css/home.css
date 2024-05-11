@@ -1,12 +1,12 @@
-/* General Styles */
+
 body {
-    background-image: url('../images/contact.jpg'); /* Replace 'background.jpg' with your image */
-    backdrop-filter: blur(5px); /* Blur effect */
+    background-image: url('../images/contact.jpg'); 
+    backdrop-filter: blur(5px); 
     background-size: cover;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f2f2f2; /* Light gray background */
+    background-color: #f2f2f2; 
 }
 
 a {
@@ -26,7 +26,7 @@ a:hover {
 
 /* Home Section */
 .home {
-    background-image: url('../images/home-bg.png'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+    background-image: url('../images/home-bg.png');
     background-size: cover;
     background-position: center;
     height: 400px;
@@ -40,17 +40,20 @@ a:hover {
 .home h3 {
     font-size: 36px;
     margin-bottom: 10px;
+    color:#45a049;
 }
 
 .home p {
     font-size: 18px;
     margin-bottom: 20px;
+    color:#2163249d;
+    
 }
 
 .home .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #4CAF50; /* Green button color */
+    background-color: #4CAF50;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -58,7 +61,7 @@ a:hover {
 }
 
 .home .btn:hover {
-    background-color: #45a049; /* Darker green on hover */
+    background-color: #45a049; 
 }
 
 /* Products Section */
@@ -72,6 +75,7 @@ a:hover {
     font-weight: bold;
     margin-bottom: 20px;
     color: #333;
+    text-align: center;
 }
 
 .box-container {
@@ -180,41 +184,41 @@ a:hover {
 
 .btn-container {
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
-    justify-content: center; /* Center items vertically */
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
 }
 
 input.qty {
-    width: 30px; /* Adjust the width as needed */
-    height: 20px; /* Adjust the height as needed */
-    padding: 2px; /* Adjust the padding as needed */
-    border: 1px solid rgba(255, 255, 255, 0.5); /* Transparent border */
+    width: 30px; 
+    height: 20px; 
+    padding: 2px; 
+    border: 1px solid rgba(255, 255, 255, 0.5); 
     background-color: transparent;
     color: inherit;
-    font-size: 12px; /* Adjust the font size as needed */
-    opacity: 0.7; /* Adjust the opacity as needed */
-    border-radius: 3px; /* Adjust the border radius as needed */
-    transition: opacity 0.3s ease; /* Add a transition effect */
-    outline: none; /* Remove default outline */
-    margin-bottom: 5px; /* Add space between items */
+    font-size: 12px; 
+    opacity: 0.7; 
+    border-radius: 3px; 
+    transition: opacity 0.3s ease; 
+    outline: none;
+    margin-bottom: 5px;
 }
 
 input.qty:hover,
 input.qty:focus {
-    opacity: 1; /* Increase opacity on hover or focus */
+    opacity: 1; 
 }
 
 .option-btn,
 .btn {
-    width: auto; /* Reset width */
-    margin: 0; /* Reset margin */
+    width: auto;
+    margin: 0;
 }
 
 
 /* Home Contact Section */
 .home-contact {
-    background-color: rgba(0, 128, 128, 0.7); /* Transparent dark cyan background */
+    background-color:#45a04948;
     padding: 20px;
     margin-top: 20px;
     color: #fff;
@@ -234,7 +238,7 @@ input.qty:focus {
 .home-contact .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #008080; /* Dark cyan button color */
+    background-color: #ff6f61; 
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -242,7 +246,7 @@ input.qty:focus {
 }
 
 .home-contact .btn:hover {
-    background-color: #006666; /* Darker cyan on hover */
+    background-color:#f3a8a1; 
 }
 
 

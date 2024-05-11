@@ -1,5 +1,5 @@
 .footer {
-    background: linear-gradient(135deg, #fcfcfca4, #ffffffa2), url('../images/footer.png') center/cover; /* Nature-inspired green gradient with background image */
+    background: linear-gradient(135deg, #fcfcfca4, #ffffffa2), url('../images/footer.png') center/cover;
     color: #333;
     padding: 20px 0;
     text-align: center;
@@ -44,7 +44,7 @@
 }
 
 .footer-links ul li a:hover {
-    color: #ffd700; /* Change to your desired hover color */
+    color: #6bee66; 
 }
 
 .footer-credit {
@@ -60,3 +60,4 @@
 .footer:hover .footer-credit {
     transform: translateY(-10px);
 }
+

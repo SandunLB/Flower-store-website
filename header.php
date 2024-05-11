@@ -16,7 +16,7 @@ if(isset($message)){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flower Website</title>
+    <title>BlossomPalace</title>
     <link rel="stylesheet" href="css/header.css">
 </head>
 <body>
@@ -25,7 +25,7 @@ if(isset($message)){
 
     <div class="header-container">
 
-        <a href="home.php" class="header-logo">flowers.</a>
+        <a href="home.php" class="header-logo">BlossomPalace</a>
 
         <nav class="header-nav">
             <ul>

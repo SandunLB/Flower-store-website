@@ -12,9 +12,9 @@
     <div class="footer-container">
         <div class="footer-info">
             <h3>Contact Info</h3>
-            <p>📞 +123-456-7890</p>
-            <p>📧 info@example.com</p>
-            <p>📍 123 Flower Street, City</p>
+            <p>📞 076 247 8252</p>
+            <p>📧 BlossomPalace@Gmail.com</p>
+            <p>📍 123 Flower Street, Kegalle</p>
         </div>
 
         <div class="footer-links">
@@ -29,7 +29,7 @@
     </div>
 
     <div class="footer-credit">
-        &copy; <?php echo date('Y'); ?> Flower Website. All rights reserved.
+        &copy; <?php echo date('Y'); ?> BlossomPalace. All rights reserved.
     </div>
 </footer>
 

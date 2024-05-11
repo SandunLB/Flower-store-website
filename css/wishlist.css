@@ -1,4 +1,4 @@
-/* Reset default margin and padding */
+
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +7,9 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-image: url('../images/contact.jpg'); 
+    backdrop-filter: blur(5px); 
+    background-size: cover;
     color: #333;
 }
 
@@ -15,7 +17,7 @@ main.wishlist {
     max-width: 400px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #ffffff57;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }

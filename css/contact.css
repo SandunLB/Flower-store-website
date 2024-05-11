@@ -1,11 +1,10 @@
-/* Add these styles to your contact.css file */
 
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-image: url('../images/contact.jpg'); /* Replace 'background.jpg' with your image */
-    backdrop-filter: blur(5px); /* Blur effect */
+    background-image: url('../images/contact.jpg'); 
+    backdrop-filter: blur(5px); 
     background-size: cover;
     color: #000000;
 }
@@ -28,11 +27,11 @@ a:hover {
     max-width: 700px;
    
     margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
-    backdrop-filter: blur(10px); /* Blur effect */
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px); 
     padding: 40px;
     border-radius: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Box shadow */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .title {
@@ -50,14 +49,14 @@ a:hover {
     padding: 15px;
     border: none;
     border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    background-color: rgba(255, 255, 255, 0.8); 
     font-size: 16px;
     color: #333;
     transition: background-color 0.3s ease;
 }
 
 .box:focus {
-    background-color: rgba(255, 255, 255, 1); /* Fully opaque background on focus */
+    background-color: rgba(255, 255, 255, 1); 
     outline: none;
 }
 

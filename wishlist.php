@@ -61,7 +61,7 @@ if(isset($_GET['delete_all'])){
 <body>
    <?php include 'header.php'; ?>
    <main class="wishlist">
-      <h1>Products Added</h1>
+      <h1>Added Products !</h1>
       <?php
          $grand_total = 0;
          $select_wishlist = mysqli_query($conn, "SELECT * FROM `wishlist` WHERE user_id = '$user_id'") or die('Query failed');
@@ -74,10 +74,9 @@ if(isset($_GET['delete_all'])){
                   <img src="uploaded_img/<?php echo $fetch_wishlist['image']; ?>" alt="" class="wishlist-item__image">
                   <div class="wishlist-item__details">
                      <h2 class="wishlist-item__name"><?php echo $fetch_wishlist['name']; ?></h2>
-                     <p class="wishlist-item__price">$<?php echo $fetch_wishlist['price']; ?>/-</p>
+                     <p class="wishlist-item__price">Rs.<?php echo $fetch_wishlist['price']; ?>.00</p>
                      <div class="wishlist-item__actions">
                         <a href="wishlist.php?delete=<?php echo $fetch_wishlist['id']; ?>" class="wishlist-item__delete" onclick="return confirm('Delete this from wishlist?');">Remove</a>
-                        <a href="view_page.php?pid=<?php echo $fetch_wishlist['pid']; ?>" class="wishlist-item__view">View</a>
                      </div>
                   </div>
                </div>
@@ -89,7 +88,7 @@ if(isset($_GET['delete_all'])){
          }
       ?>
       <div class="wishlist-total">
-         <p>Total: <span>$<?php echo $grand_total; ?>/-</span></p>
+         <p>Total: <span>Rs<?php echo $grand_total; ?>.00</span></p>
          <div class="wishlist-actions">
             <a href="shop.php" class="wishlist-actions__button">Continue Shopping</a>
             <a href="wishlist.php?delete_all" class="wishlist-actions__button <?php echo ($grand_total > 0) ? '' : 'disabled'; ?>" onclick="return confirm('Delete all from wishlist?');">Clear Wishlist</a>

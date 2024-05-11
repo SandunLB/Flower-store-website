@@ -77,19 +77,19 @@ if(isset($_POST['add_to_cart'])){
 
 <section class="home">
 
-   <div class="content">
-      <h3>new collections</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime reiciendis, modi placeat sit cumque molestiae.</p>
-      <a href="about.php" class="btn">discover more</a>
+   <div class="content-main">
+      <h3>Welcome to BlossomPalace</h3>
+      <p>Immerse yourself in the vibrant world of flowers at Blossom Haven. Explore our stunning collection and bring nature's beauty into your life.</p>
+      <a href="about.php" class="btn">Who We Are?</a>
    </div>
 
 </section>
 
 <section class="products">
-   <h1 class="title">Latest Products</h1>
+   <h1 class="title">Best Offers !</h1>
    <div class="box-container">
       <?php
-         $select_products = mysqli_query($conn, "SELECT * FROM `products` LIMIT 6") or die('query failed');
+         $select_products = mysqli_query($conn, "SELECT * FROM `products` LIMIT 12") or die('query failed');
          if(mysqli_num_rows($select_products) > 0){
             while($fetch_products = mysqli_fetch_assoc($select_products)){
       ?>
@@ -100,7 +100,7 @@ if(isset($_POST['add_to_cart'])){
             <div class="overlay">
                <div class="name"><?php echo $fetch_products['name']; ?></div>
                <div class="description"><?php echo $fetch_products['details']; ?></div>
-               <div class="price">$<?php echo $fetch_products['price']; ?>/-</div>
+               <div class="price">Rs<?php echo $fetch_products['price']; ?>.00</div>
                <div class="btn-container">
                <input type="hidden" name="product_id" value="<?php echo $fetch_products['id']; ?>">
                 <input type="hidden" name="product_name" value="<?php echo $fetch_products['name']; ?>">
@@ -134,8 +134,8 @@ if(isset($_POST['add_to_cart'])){
 <section class="home-contact">
 
    <div class="content">
-      <h3>have any questions?</h3>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio officia aliquam quis saepe? Quia, libero.</p>
+      <h3 style="color:#535353;">Problem?</h3>
+      <p style="color:#535353;">Connect with BlossomPalace for expert floral assistance and inquiries. Reach out via phone or email today!</p>
       <a href="contact.php" class="btn">contact us</a>
    </div>
 

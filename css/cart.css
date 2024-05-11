@@ -1,4 +1,14 @@
-/* Add these styles to your cart.css file */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('../images/contact.jpg'); 
+    backdrop-filter: blur(5px); 
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    color: #000000;
+}
 
 .shopping-cart {
     padding: 20px;

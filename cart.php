@@ -68,7 +68,7 @@ if(isset($_POST['update_quantity'])){
                         <img src="uploaded_img/<?php echo $fetch_cart['image']; ?>" alt="" class="product-image">
                         <span class="product-name"><?php echo $fetch_cart['name']; ?></span>
                     </td>
-                    <td>$<?php echo $fetch_cart['price']; ?>/-</td>
+                    <td>Rs<?php echo $fetch_cart['price']; ?>.00</td>
                     <td>
                         <form action="" method="post">
                             <input type="hidden" value="<?php echo $fetch_cart['id']; ?>" name="cart_id">
@@ -76,7 +76,7 @@ if(isset($_POST['update_quantity'])){
                             <input type="submit" value="Update" class="update-btn" name="update_quantity">
                         </form>
                     </td>
-                    <td>$<?php echo $sub_total = ($fetch_cart['price'] * $fetch_cart['quantity']); ?>/-</td>
+                    <td>Rs<?php echo $sub_total = ($fetch_cart['price'] * $fetch_cart['quantity']); ?>.00</td>
                     <td>
                         <a href="cart.php?delete=<?php echo $fetch_cart['id']; ?>" class="delete-btn" onclick="return confirm('Delete this item from cart?');">Delete</a>
                     </td>
@@ -93,9 +93,9 @@ if(isset($_POST['update_quantity'])){
     </div>
 
     <div class="cart-total">
-        <p>Grand Total: <span>$<?php echo $grand_total; ?>/-</span></p>
-        <a href="shop.php" class="continue-btn option-btn">Continue Shopping</a>
-        <a href="checkout.php" class="checkout-btn btn <?php echo ($grand_total > 1) ? '' : 'disabled' ?>">Proceed to Checkout</a>
+        <p>Full Total: <span>Rs<?php echo $grand_total; ?>.00</span></p>
+        <a href="shop.php" class="continue-btn option-btn">Continue Browsing</a>
+        <a href="checkout.php" class="checkout-btn btn <?php echo ($grand_total > 1) ? '' : 'disabled' ?>">Proceed to Payment</a>
     </div>
 
 </section>

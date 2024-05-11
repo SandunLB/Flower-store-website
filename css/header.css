@@ -1,5 +1,5 @@
 .header {
-   background: linear-gradient(135deg, #fcfcfcea, #fffffff1), url('../images/header.png') center/cover; /* Nature-inspired green gradient with background image */
+   background: linear-gradient(135deg, #fcfcfcea, #fffffff1), url('../images/header.png') center/cover; 
    padding: 20px;
 }
 
@@ -13,14 +13,15 @@
 .header-logo {
    font-size: 24px;
    text-decoration: none;
-   color: #333;
+   color: #e08488;
+   
 }
 
 .header-nav ul {
    list-style-type: none;
    margin: 0;
    padding: 0;
-   float: right; /* Float the navigation links to the right */
+   float: right; 
 }
 
 .header-nav li {
@@ -93,7 +94,6 @@
    border-radius: 5px;
 }
 
-/* Media Query for Responsive Design */
 @media (max-width: 768px) {
    .header-nav {
        display: none;
