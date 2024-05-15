@@ -29,7 +29,7 @@ if(!isset($admin_id)){
 
 <section class="dashboard">
 
-   <h1 class="title">dashboard</h1>
+   <h1 class="title">Dashboard</h1>
 
    <div class="box-container">
 
@@ -72,7 +72,7 @@ if(!isset($admin_id)){
             $number_of_products = mysqli_num_rows($select_products);
          ?>
          <h3><?php echo $number_of_products; ?></h3>
-         <p>Totoal Prodcuts</p>
+         <p>Totoal Flowers</p>
       </div>
 
       <div class="box">

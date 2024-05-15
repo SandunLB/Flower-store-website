@@ -145,11 +145,11 @@ section{
    }
 }
 .header {
-   background-color: #34495e; /* Dark background color */
-   color: #ffffff; /* White text color */
+   background-color: #3498db; 
+   color: #ffffff; 
    padding: 20px;
    text-align: center;
-   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for a subtle effect */
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
 }
 
 .header .logo {
@@ -168,11 +168,11 @@ section{
    text-decoration: none;
    margin: 0 15px;
    font-size: 18px;
-   transition: color 0.3s ease; /* Smooth transition for color change */
+   transition: color 0.3s ease;
 }
 
 .header .navbar a:hover {
-   color: #1abc9c; /* Green color on hover */
+   color: #1abc9c;
 }
 
 #menu-btn{
