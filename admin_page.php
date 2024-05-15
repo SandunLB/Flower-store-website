@@ -20,10 +20,6 @@ if(!isset($admin_id)){
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>dashboard</title>
 
-   <!-- font awesome cdn link  -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-   <!-- custom admin css file link  -->
    <link rel="stylesheet" href="css/admin_style.css">
 
 </head>
@@ -45,8 +41,8 @@ if(!isset($admin_id)){
                $total_pendings += $fetch_pendings['total_price'];
             };
          ?>
-         <h3>$<?php echo $total_pendings; ?>/-</h3>
-         <p>total pendings</p>
+         <h3>Rs.<?php echo $total_pendings; ?>.00</h3>
+         <p>Money Pendings</p>
       </div>
 
       <div class="box">
@@ -57,8 +53,8 @@ if(!isset($admin_id)){
                $total_completes += $fetch_completes['total_price'];
             };
          ?>
-         <h3>$<?php echo $total_completes; ?>/-</h3>
-         <p>completed paymets</p>
+         <h3>Rs<?php echo $total_completes; ?>.00</h3>
+         <p>Compleated Payements</p>
       </div>
 
       <div class="box">
@@ -67,7 +63,7 @@ if(!isset($admin_id)){
             $number_of_orders = mysqli_num_rows($select_orders);
          ?>
          <h3><?php echo $number_of_orders; ?></h3>
-         <p>orders placed</p>
+         <p>Totoal Orders</p>
       </div>
 
       <div class="box">
@@ -76,25 +72,7 @@ if(!isset($admin_id)){
             $number_of_products = mysqli_num_rows($select_products);
          ?>
          <h3><?php echo $number_of_products; ?></h3>
-         <p>products added</p>
-      </div>
-
-      <div class="box">
-         <?php
-            $select_users = mysqli_query($conn, "SELECT * FROM `users` WHERE user_type = 'user'") or die('query failed');
-            $number_of_users = mysqli_num_rows($select_users);
-         ?>
-         <h3><?php echo $number_of_users; ?></h3>
-         <p>normal users</p>
-      </div>
-
-      <div class="box">
-         <?php
-            $select_admin = mysqli_query($conn, "SELECT * FROM `users` WHERE user_type = 'admin'") or die('query failed');
-            $number_of_admin = mysqli_num_rows($select_admin);
-         ?>
-         <h3><?php echo $number_of_admin; ?></h3>
-         <p>admin users</p>
+         <p>Totoal Prodcuts</p>
       </div>
 
       <div class="box">
@@ -103,7 +81,7 @@ if(!isset($admin_id)){
             $number_of_account = mysqli_num_rows($select_account);
          ?>
          <h3><?php echo $number_of_account; ?></h3>
-         <p>total accounts</p>
+         <p>Accounts</p>
       </div>
 
       <div class="box">
@@ -112,7 +90,7 @@ if(!isset($admin_id)){
             $number_of_messages = mysqli_num_rows($select_messages);
          ?>
          <h3><?php echo $number_of_messages; ?></h3>
-         <p>new messages</p>
+         <p>Messages for Customers</p>
       </div>
 
    </div>
