@@ -140,365 +140,327 @@ section{
       transform: translateY(1rem);
    }
 }
-
-.header{
-   position: sticky;
-   top:0; left:0; right:0;
-   z-index: 1000;
-   background-color: var(--white);
-   box-shadow: var(--box-shadow);
-}
-
-.header .flex{
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   padding:2rem;
-   max-width: 1200px;
-   margin:0 auto;
-   position: relative;
-}
-
-.header .flex .account-box{
-   position: absolute;
-   top:120%; right:2rem;
-   width: 33rem;
-   border-radius: .5rem;
-   box-shadow: var(--box-shadow);
-   background-color: var(--white);
-   padding:2rem;
+.header {
+   background-color: #34495e; /* Dark background color */
+   color: #ffffff; /* White text color */
+   padding: 20px;
    text-align: center;
-   border:var(--border);
-   display: none;
-   animation: fadeIn .2s linear;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for a subtle effect */
 }
 
-.header .flex .account-box.active{
-   display: inline-block;
+.header .logo {
+   font-size: 30px;
+   font-weight: bold;
+   text-transform: uppercase;
+   letter-spacing: 2px;
 }
 
-.header .flex .account-box p{
-   padding-bottom: 1rem;
-   font-size: 2rem;
-   color:var(--light-color);
-   line-height: 1.5;
+.header .navbar {
+   margin-top: 20px;
 }
 
-.header .flex .account-box p span{
-   color:var(--pink);
+.header .navbar a {
+   color: #ffffff;
+   text-decoration: none;
+   margin: 0 15px;
+   font-size: 18px;
+   transition: color 0.3s ease; /* Smooth transition for color change */
 }
 
-.header .flex .account-box div{
-   font-size: 2rem;
-   margin-top: 2rem;
-   color:var(--light-color);
-}
-
-.header .flex .account-box div a{
-   color:var(--orange);
-}
-
-.header .flex .account-box div a:hover{
-   text-decoration: underline;
-}
-
-.header .flex .icons div{
-   font-size: 2.5rem;
-   margin-left: 1.7rem;
-   cursor: pointer;
-   color:var(--black);
-}
-
-.header .flex .icons div:hover{
-   color:var(--pink);
-}
-
-.header .flex .navbar a{
-   margin:0 1rem;
-   font-size: 2rem;
-   color:var(--light-color);
-}
-
-.header .flex .navbar a:hover{
-   text-decoration: underline;
-   color:var(--pink);
-}
-
-.header .flex .logo{
-   font-size: 2.5rem;
-   color:var(--black);
-}
-
-.header .flex .logo span{
-   color:var(--pink);
+.header .navbar a:hover {
+   color: #1abc9c; /* Green color on hover */
 }
 
 #menu-btn{
    display: none;
 }
 
-.dashboard .box-container{
-   display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
-   gap:1.5rem;
-   align-items: flex-start;
-   max-width: 1200px;
-   margin: 0 auto;
-}
-
-.dashboard .box-container .box{
-   text-align: center;
-   border:var(--border);
-   background-color: var(--white);
-   box-shadow: var(--box-shadow);
-   padding:2rem;
-   border-radius: .5rem;
-}
-
-.dashboard .box-container .box h3{
-   font-size: 4.5rem;
-   color:var(--black);
-}
-
-.dashboard .box-container .box p{
-   padding:1.5rem;
-   border-radius: .5rem;
-   background-color: var(--light-bg);
-   color:var(--light-color);
-   border:var(--border);
-   margin-top: 2rem;
-   font-size: 2rem;
-}
-
-.add-products form{
-   max-width: 50rem;
-   border-radius: .5rem;
-   background-color: var(--white);
-   border:var(--border);
-   padding:2rem;
-   text-align: center;
-   margin:0 auto;
-   box-shadow: var(--box-shadow);
-}
-
-.add-products form h3{
-   font-size: 2.5rem;
-   text-transform: uppercase;
-   color:var(--black);
-   margin-bottom: 1rem;
-}
-
-.add-products form .box{
-   width: 100%;
-   margin:1rem 0;
-   font-size: 1.8rem;
-   color:var(--black);
-   border-radius: .5rem;
-   background-color: var(--light-bg);
-   padding:1.2rem 1.4rem;
-   border:var(--border);
-}
-
-.add-products form textarea{
-   height: 15rem;
-   resize: none;
-}
-
-.show-products .box-container{
-   display: grid;
-   grid-template-columns: repeat(auto-fit, 30rem);
-   gap:1.5rem;
-   align-items: flex-start;
-   max-width: 1200px;
-   margin: 0 auto;
+.dashboard .box-container {
+   display: flex;
+   flex-wrap: wrap;
    justify-content: center;
-}
-
-.show-products .box-container .box{
-   text-align: center;
-   padding:2rem;
-   border:var(--border);
-   background-color: var(--white);
-   box-shadow: var(--box-shadow);
-   border-radius: .5rem;
-   position: relative;
-}
-
-.show-products .box-container .box .image{
-   height: 30rem;
-   margin-bottom: .5rem;
-}
-
-.show-products .box-container .box .price{
-   background-color: var(--pink);
-   position: absolute;
-   top:1rem; left:1rem;
-   border-radius: .5rem;
-   color:var(--white);
-   padding:1rem;
-   font-size: 2rem;
-}
-
-.show-products .box-container .box .name{
-   margin:1rem 0;
-   font-size: 2rem;
-   color:var(--black);
-}
-
-.show-products .box-container .box .details{
-   line-height: 1.5;
-   color:var(--light-color);
-   font-size: 1.5rem;
-   padding:.5rem 0;
-}
-
-.update-product form{
-   max-width: 50rem;
-   border-radius: .5rem;
-   background-color: var(--white);
-   border:var(--border);
-   padding:2rem;
-   text-align: center;
-   margin:0 auto;
-   box-shadow: var(--box-shadow);
-}
-
-.update-product form h3{
-   font-size: 2.5rem;
-   text-transform: uppercase;
-   color:var(--black);
-   margin-bottom: 1rem;
-}
-
-.update-product form .box{
-   width: 100%;
-   margin:1rem 0;
-   font-size: 1.8rem;
-   color:var(--black);
-   border-radius: .5rem;
-   background-color: var(--light-bg);
-   padding:1.2rem 1.4rem;
-   border:var(--border);
-}
-
-.update-product form textarea{
-   height: 15rem;
-   resize: none;
-}
-
-.update-product .image{
-   height: 30rem;
-   border:var(--border);
-   border-radius: .5rem;
-}
-
-.placed-orders .box-container{
-   display: grid;
-   grid-template-columns: repeat(auto-fit, 33rem);
-   gap:1.5rem;
-   align-items: flex-start;
    max-width: 1200px;
    margin: 0 auto;
+   padding: 20px;
+}
+
+.dashboard .box-container .box {
+   flex: 1 1 300px; 
+   background-color: #3498db; 
+   color: #ffffff; 
+   text-align: center;
+   border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+   padding: 20px;
+   margin: 10px; 
+   transition: transform 0.3s ease; 
+}
+
+.dashboard .box-container .box:hover {
+   transform: translateY(-5px); 
+}
+
+.dashboard .box-container .box h3 {
+   font-size: 24px; 
+   margin-bottom: 10px; 
+}
+
+.dashboard .box-container .box p {
+   font-size: 18px; 
+   margin-top: 10px; 
+   line-height: 1.5; 
+}
+.add-products form {
+   max-width: 600px; /* Increase the max-width for a wider form */
+   border-radius: 10px; /* Rounded corners for the form */
+   background-color: #ffffff; /* White background color */
+   border: 1px solid #dddddd; /* Light gray border */
+   padding: 20px; /* Padding for spacing */
+   text-align: center; /* Center align text */
+   margin: 0 auto; /* Center the form horizontally */
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+.add-products form h3 {
+   font-size: 24px; /* Decrease font size for headings */
+   text-transform: uppercase; /* Uppercase text */
+   color: #333333; /* Dark text color */
+   margin-bottom: 20px; /* Increase bottom margin */
+}
+
+.add-products form .box {
+   width: 100%; /* Full width for input boxes */
+   margin: 10px 0; /* Adjust margin for spacing */
+   font-size: 16px; /* Decrease font size for input boxes */
+   color: #333333; /* Dark text color */
+   border-radius: 5px; /* Rounded corners for input boxes */
+   background-color: #f2f2f2; /* Light gray background color */
+   padding: 12px 14px; /* Padding for input boxes */
+   border: 1px solid #dddddd; /* Light gray border */
+}
+
+.add-products form textarea {
+   height: 200px; /* Increase height of textarea */
+   width: 100%; /* Full width for textarea */
+   resize: none; /* Disable textarea resizing */
+   margin-top: 10px; /* Adjust margin for spacing */
+}
+
+.show-products .box-container {
+   display: flex;
+   flex-wrap: wrap;
    justify-content: center;
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 20px; /* Add padding for spacing */
 }
 
-.placed-orders .box-container .box{
-   padding:2rem;
-   border:var(--border);
-   background-color: var(--white);
-   box-shadow: var(--box-shadow);
-   border-radius: .5rem;
+.show-products .box-container .box {
+   flex: 0 0 calc(30% - 20px); /* Three boxes per row with some margin */
+   margin: 10px; /* Margin for spacing between boxes */
+   background-color: #f9f9f9; /* Light gray background color */
+   border-radius: 8px; /* Rounded corners */
+   overflow: hidden; /* Hide overflowing content */
+   position: relative; /* Position for absolute elements */
+   transition: transform 0.3s ease; /* Smooth transition for transform */
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+   text-align: center; /* Center align text */
 }
 
-.placed-orders .box-container .box p{
-   margin-bottom: 1rem;
-   font-size: 2rem;
-   color:var(--light-color);
+.show-products .box-container .box:hover {
+   transform: translateY(-5px); /* Move the box up slightly on hover */
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
 }
 
-.placed-orders .box-container .box p span{
-   color:var(--pink);
+.show-products .box-container .box .image {
+   height: 200px; /* Set fixed height for the image */
+   width: 100%; /* Full width for the image */
+   object-fit: cover; /* Maintain aspect ratio */
+   border-radius: 8px 8px 0 0; /* Rounded corners for the top */
 }
 
-.placed-orders .box-container .box form{
-   margin-top: 1rem;
+.show-products .box-container .box .content {
+   padding: 20px; /* Padding for content */
+}
+
+.show-products .box-container .box .name {
+   margin: 0; /* Reset margin */
+   font-size: 20px; /* Font size for name */
+   color: #333333; /* Dark text color */
+   font-weight: bold; /* Bold font weight */
+}
+
+.show-products .box-container .box .price {
+   margin-top: 10px; /* Adjust top margin */
+   font-size: 18px; /* Font size for price */
+   color: #04615cce; /* Red color for price */
+   font-weight: bold; /* Bold font weight */
+}
+
+.show-products .box-container .box .details {
+   margin-top: 10px; /* Adjust top margin */
+   font-size: 16px; /* Font size for details */
+   color: #777777; /* Light text color */
+}
+
+.update-product form {
+   max-width: 400px; /* Set max width for the form */
+   margin: 0 auto; /* Center the form horizontally */
+   padding: 20px; /* Add padding for spacing */
+   background-color: #f9f9f9; /* Light gray background color */
+   border-radius: 8px; /* Rounded corners for the form */
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.update-product form h3 {
+   font-size: 20px; /* Font size for heading */
+   margin-bottom: 20px; /* Bottom margin for spacing */
+   color: #333333; /* Dark text color */
+}
+
+.update-product form .box {
+   width: 100%; /* Full width for input boxes */
+   margin-bottom: 15px; /* Bottom margin for spacing */
+}
+
+.update-product form input,
+.update-product form textarea {
+   width: calc(100% - 20px); /* Full width for input and textarea with some padding */
+   padding: 10px; /* Padding for input and textarea */
+   border: 1px solid #dddddd; /* Light gray border */
+   border-radius: 5px; /* Rounded corners for input and textarea */
+   box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.update-product form textarea {
+   height: 100px; /* Set height for textarea */
+   resize: none; /* Disable textarea resizing */
+}
+
+.update-product form button {
+   width: 100%; /* Full width for the button */
+   padding: 10px; /* Padding for the button */
+   background-color: #1abc9c; /* Green background color */
+   border: none; /* No border */
+   border-radius: 5px; /* Rounded corners for the button */
+   color: #ffffff; /* White text color */
+   font-size: 16px; /* Font size for the button */
+   cursor: pointer; /* Cursor style */
+   transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.update-product form button:hover {
+   background-color: #16a085; /* Darker green background color on hover */
+}
+
+.placed-orders .box-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust column width as needed */
+   gap: 20px; /* Spacing between grid items */
+   max-width: 1200px;
+   margin: 0 auto;
+}
+
+.placed-orders .box-container .box {
+   padding: 20px;
+   border: 1px solid #dddddd; /* Light gray border */
+   background-color: #ffffff; /* White background color */
+   border-radius: 8px; /* Rounded corners */
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.placed-orders .box-container .box p {
+   margin-bottom: 10px; /* Bottom margin for spacing */
+   font-size: 18px; /* Font size */
+   color: #777777; /* Light text color */
+}
+
+.placed-orders .box-container .box p span {
+   color: #e74c3c; /* Red color */
+}
+
+.placed-orders .box-container .box table {
+   width: 100%; /* Full width for the table */
+   border-collapse: collapse; /* Collapse border spacing */
+}
+
+.placed-orders .box-container .box th,
+.placed-orders .box-container .box td {
+   padding: 10px; /* Padding for table cells */
+   border: 1px solid #dddddd; /* Light gray border */
+}
+
+.placed-orders .box-container .box th {
+   background-color: #f9f9f9; /* Light gray background color for table header */
+   font-weight: bold; /* Bold font weight for table header */
+   text-align: left; /* Left align text in table header */
+}
+
+.users .box-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust column width as needed */
+   gap: 20px; /* Spacing between grid items */
+   max-width: 1200px;
+   margin: 0 auto;
+}
+
+.users .box-container .box {
+   padding: 20px;
+   border: 1px solid #dddddd; /* Light gray border */
+   background-color: #ffffff; /* White background color */
+   border-radius: 8px; /* Rounded corners */
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
    text-align: center;
 }
 
-.placed-orders .box-container .box form select{
-   width: 100%;
-   border:var(--border);
-   padding:1.2rem 1.4rem;
-   font-size: 1.8rem;
-   color:var(--black);
-   border:var(--border);
-   border-radius: .5rem;
-   margin:.5rem 0;
+.users .box-container .box p {
+   font-size: 18px; /* Font size */
+   color: #333333; /* Dark text color */
+   margin-bottom: 10px; /* Bottom margin for spacing */
+   line-height: 1.5; /* Adjust line height */
 }
 
-.users .box-container{
-   display: grid;
-   grid-template-columns: repeat(auto-fit, 33rem);
-   gap:1.5rem;
-   align-items: flex-start;
+.users .box-container .box p span {
+   color: #e74c3c; /* Red color */
+}
+
+.users .box-container .box .delete-btn {
+   margin-top: 10px; /* Top margin for spacing */
+   padding: 10px 20px; /* Padding for button */
+   background-color: #e74c3c; /* Red background color */
+   color: #ffffff; /* White text color */
+   border: none; /* No border */
+   border-radius: 5px; /* Rounded corners */
+   cursor: pointer; /* Cursor style */
+   transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.users .box-container .box .delete-btn:hover {
+   background-color: #c0392b; /* Darker red background color on hover */
+}
+
+
+.messages .box-container {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
    max-width: 1200px;
    margin: 0 auto;
-   justify-content: center;
 }
 
-.users .box-container .box{
-   padding:2rem;
-   border:var(--border);
-   background-color: var(--white);
-   box-shadow: var(--box-shadow);
-   border-radius: .5rem;
-   text-align: center;
+.messages .box-container .box {
+   width: 300px;
+   margin: 20px;
+   padding: 20px;
+   border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   background-color: #fff;
 }
 
-.users .box-container .box p{
-   font-size: 2rem;
-   color:var(--light-color);
-   margin-bottom: 1rem;
-   line-height: 1.5;
+.messages .box-container .box p {
+   font-size: 16px;
+   margin-bottom: 10px;
 }
-
-.users .box-container .box p span{
-   color:var(--pink);
-}
-
-.users .box-container .box .delete-btn{
-   margin-top: .5;
-}
-
-.messages .box-container{
-   display: grid;
-   grid-template-columns: repeat(auto-fit, 33rem);
-   gap:1.5rem;
-   align-items: flex-start;
-   max-width: 1200px;
-   margin: 0 auto;
-   justify-content: center;
-}
-
-.messages .box-container .box{
-   padding:2rem;
-   border:var(--border);
-   background-color: var(--white);
-   box-shadow: var(--box-shadow);
-   border-radius: .5rem;
-}
-
-.messages .box-container .box p{
-   font-size: 2rem;
-   color:var(--light-color);
-   margin-bottom: 1rem;
-   line-height: 1.5;
-}
-
-.messages .box-container .box p span{
-   color:var(--pink);
-}
-
 
 
 
