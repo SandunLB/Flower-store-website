@@ -24,7 +24,7 @@ if(isset($message)){
          <a href="admin_users.php">Accounts</a>
          <a href="admin_contacts.php">Messages</a>
 
-         <a href="logout.php" >Logout!</a>
+         <a href="admin_logout.php" >Logout!</a>
 
       </nav>
 
